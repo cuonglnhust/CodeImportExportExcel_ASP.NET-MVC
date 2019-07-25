@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Import File to Server</h2>
+
+
+<script type="text/javascript">
+
+    function alert() {
+        alert("Import thành công!");
+    }
+
+/**/</script>
+
+@using (Html.BeginForm("Upload", "ImportExcel", FormMethod.Post, new
+{
+    enctype = "multipart/form-data"
+}))
+{
+
+    <table>
+        <tr>
+            <td>
+                File:
+            </td>
+            <td>
+                <input type="file"
+                       name="UploadedFile" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <br />
+                <button class="btn btn-success"
+                        onclick="alert()"
+                        type="submit"
+                        name="Submit"
+                        value="Submit">
+                    Click To Import
+                </button>
+            </td>
+        </tr>
+    </table>
+
+}
+
+
